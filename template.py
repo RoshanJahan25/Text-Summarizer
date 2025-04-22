@@ -25,6 +25,7 @@ list_of_files = [
     "main.py",
     "Dockerfile",
     "requirements.txt",
+    "test.py",
     "setup.py",
     "research//trials.ipynb"
 ]
@@ -34,7 +35,7 @@ for filepath in list_of_files:
     filedir,filename = os.path.split(filepath)
     os.makedirs("research",exist_ok=True)
     
-    if filedir == (filepath):
+    if filedir != "":
         os.makedirs(filedir, exist_ok=True)
         logging.info(f"Creating directory: {filedir} for the file {filename}")
         
