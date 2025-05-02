@@ -46,7 +46,8 @@ def create_directories(path_to_directories: list, verbose=True):
 
 @ensure_annotations
 def get_size(path: Path) -> str:
-    size_in_kb = round(os.Path.getsize(path)/1024)
+    
+    size_in_kb = round(Path(path).stat().st_size / 1024)
     return f"~ {size_in_kb} KB" 
 
 """ get size in KB
