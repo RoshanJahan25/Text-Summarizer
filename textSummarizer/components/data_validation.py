@@ -1,7 +1,6 @@
 import os
 from textSummarizer.logging import logger
 from textSummarizer.entity import DataValidationConfig
-from pathlib import Path
 
 class DataValiadtion:
     def __init__(self, config: DataValidationConfig):
